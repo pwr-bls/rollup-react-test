@@ -1,0 +1,40 @@
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    min-width: 77px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button.button-tag {
+    padding: 10px 16px;
+}
+
+.button.button-tag:active, .button.button-tag:hover {
+    color: #1E1E1E;
+    background: #FFFFFF;
+}
+.button.button-tag:active .button-text {
+    color: #1E1E1E;
+}
+
+.button:active, button:hover {
+    background: #007BFF;
+
+}
+.button:active .button-text {
+    color: #FFFFFF;
+}
+
+.button-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1E1E1E;
+}
