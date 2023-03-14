@@ -1,22 +1,19 @@
 import "./App.css"
-import {Provider} from "react-redux";
-import {createStore} from "redux";
+import {useDispatch} from "react-redux";
 
-import listReducer from "./redux/reducer";
 import Button from "./components/Button";
 import {useRef} from "react";
 import TagsContainer from "./components/TagsContainer";
 
-//@ts-ignore
-const store = createStore(listReducer)
 
 function App() {
+  const dispatch = useDispatch();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const removeItem = (index: number) => {
-    store.dispatch({ type: 'list/remove', value:index })
+    dispatch({ type: 'list/remove', value:index })
   }
   const addItem = (value: string) => {
-    store.dispatch({ type: 'list/add', value })
+    dispatch({ type: 'list/add', value })
   }
 
   const handleClick = () => {
@@ -28,8 +25,7 @@ function App() {
     inputRef.current.value = "";
   };
 
-  return <Provider store={store}>
-    <div id="App">
+  return     <div id="App">
       <div className="tag-field">
         <div className="input-container">
           <input ref={inputRef} className="input-field" />
@@ -38,7 +34,6 @@ function App() {
         <TagsContainer onRemove={removeItem}/>
       </div>
     </div>
-  </Provider>
    ;
 }
 
