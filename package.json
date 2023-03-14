@@ -45,7 +45,13 @@
       "last 1 safari version"
     ]
   },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "none",
+    "singleQuote": true
+  },
   "devDependencies": {
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+    "prettier": "^2.8.4"
   }
 }

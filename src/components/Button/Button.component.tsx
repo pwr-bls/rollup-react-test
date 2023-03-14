@@ -8,7 +8,8 @@ type ButtonType = {
     isTag?: boolean;
 };
 const Button: React.FC<ButtonType> = ({title, onClick, isTag}) => {
-    return <div className={isTag ? `button button-tag` : `button`} onClick={onClick}><span className="button-text">{title}</span></div>
+    return <div className={isTag ? `button button-tag` : `button`} onClick={onClick}><span
+        className="button-text">{title}</span></div>
 };
 
 export default Button;
